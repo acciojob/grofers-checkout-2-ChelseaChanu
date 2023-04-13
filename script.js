@@ -8,7 +8,5 @@ for(let amount of price){
 
 const row = table.insertRow(-1);
 const cell1 = row.insertCell(0);
-const cell2 = row.insertCell(1);
-cell1.innerText = "Grand Total";
-cell2.innerText = total;
-cell2.setAttribute('id','grandTotal');
+cell1.innerText = total;
+cell1.setAttribute('id','grandTotal');

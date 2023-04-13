@@ -9,6 +9,6 @@ for(let amount of price){
 const row = document.createElement("tr");
 const cell = document.createElement("td");
 cell.innerText = total;
-cell.setAttribute('data-ns-test','grandTotal');
+cell.dataset.test = "grandTotal";
 row.appendChild(cell);
 table.appendChild(row);

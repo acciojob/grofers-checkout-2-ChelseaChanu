@@ -1,12 +1,14 @@
 //your code here
 const table = document.getElementById("table");
-const price = document.querySelectorAll(".prices");
+const price = document.querySelectorAll('[data-ns-test="price"]');
 let total = 0;
 for(let amount of price){
 	total += parseFloat(amount.innerText);
 }
 
-const row = table.insertRow(-1);
-const cell1 = row.insertCell(0);
-cell1.innerText = total;
-cell1.setAttribute('id','grandTotal');
+const row = document.createElement("tr");
+const cell = document.createElement("td");
+cell.innerText = total;
+cell.setAttribute('data-ns-test','grandTotal');
+row.appendChild(cell);
+table.appendChild(row);

@@ -3,7 +3,7 @@ const table = document.getElementById("table");
 const price = document.querySelectorAll('[data-ns-test="price"]');
 let total = 0;
 for(let amount of price){
-	total += parseFloat(amount.innerText);
+	total += parseInt(amount.innerText);
 }
 
 const row = document.createElement("tr");
